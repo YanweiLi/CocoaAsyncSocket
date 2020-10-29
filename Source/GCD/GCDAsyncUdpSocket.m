@@ -253,7 +253,7 @@ enum GCDAsyncUdpSocketConfig
 
 #if TARGET_OS_IPHONE
 // Forward declaration
-+ (void)listenerThread:(id)unused;
++ (void)listenerThread;
 #endif
 
 @end

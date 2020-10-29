@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -88,9 +88,6 @@
 		8710851B23FAA4E00004F896 /* SecureSocketServer.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SecureSocketServer.p12; sourceTree = "<group>"; };
 		8710851C23FAA4E00004F896 /* TestSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSocket.swift; sourceTree = "<group>"; };
 		8710851D23FAA4E00004F896 /* GCDAsyncSocketReadTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDAsyncSocketReadTests.swift; sourceTree = "<group>"; };
-		D92A3B9323FBA8400089F6C3 /* CocoaAsyncSocketTests (iOS).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "CocoaAsyncSocketTests (iOS).xctestplan"; sourceTree = "<group>"; };
-		D92A3B9423FBA8400089F6C3 /* CocoaAsyncSocketTests (tvOS).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "CocoaAsyncSocketTests (tvOS).xctestplan"; sourceTree = "<group>"; };
-		D92A3B9523FBA8400089F6C3 /* CocoaAsyncSocketTests (macOS).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "CocoaAsyncSocketTests (macOS).xctestplan"; sourceTree = "<group>"; };
 		D9486AD81E62B9F8002FE3B3 /* CocoaAsyncSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CocoaAsyncSocket.xcodeproj; path = ../../CocoaAsyncSocket.xcodeproj; sourceTree = "<group>"; };
 		D9486AF41E62BA66002FE3B3 /* CocoaAsyncSocketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaAsyncSocketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9486B061E62BB3D002FE3B3 /* CocoaAsyncSocketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaAsyncSocketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,9 +175,6 @@
 		D9873DA11A057F34004C014F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				D92A3B9323FBA8400089F6C3 /* CocoaAsyncSocketTests (iOS).xctestplan */,
-				D92A3B9523FBA8400089F6C3 /* CocoaAsyncSocketTests (macOS).xctestplan */,
-				D92A3B9423FBA8400089F6C3 /* CocoaAsyncSocketTests (tvOS).xctestplan */,
 				D938B4E61B752ED800FE8AB3 /* Shared */,
 				D9BC0D8E1A0458EF0059D906 /* Mac */,
 			);
@@ -292,21 +286,20 @@
 				LastUpgradeCheck = 0930;
 				TargetAttributes = {
 					D9486AE71E62BA66002FE3B3 = {
-						LastSwiftMigration = 1130;
+						LastSwiftMigration = 0910;
 					};
 					D9BC0D8C1A0458EF0059D906 = {
 						CreatedOnToolsVersion = 6.1;
-						LastSwiftMigration = 1130;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
 			buildConfigurationList = D9BC0D781A0457800059D906 /* Build configuration list for PBXProject "CocoaAsyncSocketTests" */;
-			compatibilityVersion = "Xcode 11.0";
-			developmentRegion = en;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = D9BC0D741A0457800059D906;
 			productRefGroup = D9BC0D801A0457F40059D906 /* Products */;
@@ -478,11 +471,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = ../Shared/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisballinger.$(PRODUCT_NAME:rfc1034identifier)";
@@ -526,11 +515,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = ../Shared/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisballinger.$(PRODUCT_NAME:rfc1034identifier)";
@@ -578,11 +563,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = ../Shared/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisballinger.$(PRODUCT_NAME:rfc1034identifier)";
@@ -626,11 +607,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = ../Shared/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisballinger.$(PRODUCT_NAME:rfc1034identifier)";
@@ -671,7 +648,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -705,9 +682,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -750,11 +726,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = ../Shared/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisballinger.$(PRODUCT_NAME:rfc1034identifier)";
@@ -798,11 +770,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = ../Shared/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisballinger.$(PRODUCT_NAME:rfc1034identifier)";

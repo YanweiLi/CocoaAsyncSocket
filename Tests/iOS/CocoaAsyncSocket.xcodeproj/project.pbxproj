@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,7 +28,6 @@
 		8710850323FA9C920004F896 /* SecureSocketServer.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SecureSocketServer.p12; sourceTree = "<group>"; };
 		8710850423FA9C920004F896 /* TestSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSocket.swift; sourceTree = "<group>"; };
 		8710850523FA9C920004F896 /* GCDAsyncSocketReadTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDAsyncSocketReadTests.swift; sourceTree = "<group>"; };
-		D92A3B9023FB9DBB0089F6C3 /* CocoaAsyncSocketTestsiOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; path = CocoaAsyncSocketTestsiOS.xctestplan; sourceTree = SOURCE_ROOT; };
 		D9BC0D7F1A0457F40059D906 /* CocoaAsyncSocketTestsiOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaAsyncSocketTestsiOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9BC0D831A0457F40059D906 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,7 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				D9BC0D831A0457F40059D906 /* Info.plist */,
-				D92A3B9023FB9DBB0089F6C3 /* CocoaAsyncSocketTestsiOS.xctestplan */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -151,6 +149,7 @@
 				D9BC0D7C1A0457F40059D906 /* Frameworks */,
 				D9BC0D7D1A0457F40059D906 /* Resources */,
 				7594E80B245258DFDE2891DC /* [CP] Embed Pods Frameworks */,
+				AD41FC86F18F9F3457965171 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,7 +167,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 0930;
 				TargetAttributes = {
 					D9BC0D7E1A0457F40059D906 = {
 						CreatedOnToolsVersion = 6.1;
@@ -177,12 +176,11 @@
 				};
 			};
 			buildConfigurationList = D9BC0D781A0457800059D906 /* Build configuration list for PBXProject "CocoaAsyncSocket" */;
-			compatibilityVersion = "Xcode 11.0";
-			developmentRegion = en;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = D9BC0D741A0457800059D906;
 			productRefGroup = D9BC0D801A0457F40059D906 /* Products */;
@@ -229,16 +227,32 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CocoaAsyncSocketTestsiOS/Pods-CocoaAsyncSocketTestsiOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CocoaAsyncSocketTestsiOS/Pods-CocoaAsyncSocketTestsiOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CocoaAsyncSocketTestsiOS/Pods-CocoaAsyncSocketTestsiOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CocoaAsyncSocketTestsiOS/Pods-CocoaAsyncSocketTestsiOS-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CocoaAsyncSocketTestsiOS/Pods-CocoaAsyncSocketTestsiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD41FC86F18F9F3457965171 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CocoaAsyncSocketTestsiOS/Pods-CocoaAsyncSocketTestsiOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -263,7 +277,6 @@
 		D9BC0D791A0457800059D906 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -293,14 +306,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		D9BC0D7A1A0457800059D906 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -328,9 +340,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -370,11 +381,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisballinger.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -413,11 +420,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisballinger.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
